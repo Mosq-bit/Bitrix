@@ -197,7 +197,7 @@ input {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .form__section{
     margin-top: 0;
     padding: 60px 16px 0 16px;
@@ -211,7 +211,7 @@ input {
   }
 }
 
-@media (max-width: 328px) {
+@media (max-width: 410px) {
   .form__section {
     padding: 60px 16px 16px;
     max-width: 328px;
