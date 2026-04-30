@@ -50,7 +50,7 @@
     alert(
       "Поиск: " +
         query +
-        "\n(Функция поиска может быть реализована на бэкенде)",
+        "\n(Функция поиска может быть реализована на бэкенде)"
     );
     closeSearchModal();
     if (searchInput) searchInput.value = "";
@@ -97,14 +97,14 @@
 
   const handleProjectClick = () => {
     alert(
-      "Спасибо за интерес! Наш менеджер свяжется с вами для обсуждения проекта.",
+      "Спасибо за интерес! Наш менеджер свяжется с вами для обсуждения проекта."
     );
   };
 
   if (desktopBtn) desktopBtn.addEventListener("click", handleProjectClick);
   if (mobileBtn) mobileBtn.addEventListener("click", handleProjectClick);
 
-  // ===== ФУНКЦИИ ДЛЯ СЛАЙДЕРОВ (точки пагинации для 360/320px) =====
+  // ===== ФУНКЦИИ ДЛЯ СЛАЙДЕРОВ (точки пагинации для 600px) =====
   function initSliderDots(sliderWrapperId, cardsId, dotsContainerId) {
     const wrapper = document.getElementById(sliderWrapperId);
     const cardsContainer = document.getElementById(cardsId);
@@ -120,7 +120,8 @@
       return;
     }
 
-    if (window.innerWidth > 400) return;
+    // ✅ Изменено: проверяем ширину экрана <= 600px
+    if (window.innerWidth > 600) return;
 
     const cards = cardsContainer.children;
     const cardCount = cards.length;
@@ -143,7 +144,7 @@
             const scrollPosition = card.offsetLeft - wrapper.offsetLeft;
             wrapper.scrollTo({ left: scrollPosition, behavior: "smooth" });
           };
-        })(i),
+        })(i)
       );
       dotsContainer.appendChild(dot);
     }
@@ -180,11 +181,12 @@
   }
 
   function initSlidersIfNeeded() {
-    if (window.innerWidth <= 400) {
+    // ✅ Изменено: проверяем ширину экрана <= 600px
+    if (window.innerWidth <= 600) {
       initSliderDots(
         "recomendationSlider",
         "recomendationCards",
-        "recomendationDots",
+        "recomendationDots"
       );
       initSliderDots("stackSlider", "stackCards", "stackDots");
     }
@@ -197,20 +199,22 @@
     initSlidersIfNeeded();
   }
 
+  // При изменении размера окна
   window.addEventListener("resize", function () {
-    if (window.innerWidth <= 400) {
-      // ✅ было 320, стало 400
+    const recomendationDots = document.getElementById("recomendationDots");
+    const stackDots = document.getElementById("stackDots");
+
+    // ✅ Изменено: проверяем ширину экрана <= 600px
+    if (window.innerWidth <= 600) {
       setTimeout(function () {
         initSliderDots(
           "recomendationSlider",
           "recomendationCards",
-          "recomendationDots",
+          "recomendationDots"
         );
         initSliderDots("stackSlider", "stackCards", "stackDots");
       }, 50);
     } else {
-      const recomendationDots = document.getElementById("recomendationDots");
-      const stackDots = document.getElementById("stackDots");
       if (recomendationDots) recomendationDots.innerHTML = "";
       if (stackDots) stackDots.innerHTML = "";
     }
@@ -231,11 +235,13 @@
         clickable: true,
       },
       breakpoints: {
-        360: {
+        // ✅ Добавлен брейкпоинт 400px
+        400: {
           slidesPerView: 1,
           spaceBetween: 16,
         },
-        640: {
+        // ✅ Добавлен брейкпоинт 600px
+        600: {
           slidesPerView: 1.5,
           spaceBetween: 18,
         },
