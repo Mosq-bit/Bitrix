@@ -50,7 +50,7 @@
     alert(
       "Поиск: " +
         query +
-        "\n(Функция поиска может быть реализована на бэкенде)"
+        "\n(Функция поиска может быть реализована на бэкенде)",
     );
     closeSearchModal();
     if (searchInput) searchInput.value = "";
@@ -97,7 +97,7 @@
 
   const handleProjectClick = () => {
     alert(
-      "Спасибо за интерес! Наш менеджер свяжется с вами для обсуждения проекта."
+      "Спасибо за интерес! Наш менеджер свяжется с вами для обсуждения проекта.",
     );
   };
 
@@ -112,12 +112,15 @@
 
     // Проверяем наличие всех элементов
     if (!wrapper || !cardsContainer || !dotsContainer) {
-      console.warn('Slider elements not found:', {sliderWrapperId, cardsId, dotsContainerId});
+      console.warn("Slider elements not found:", {
+        sliderWrapperId,
+        cardsId,
+        dotsContainerId,
+      });
       return;
     }
-    
-    // Проверяем ширину экрана (360px или меньше)
-    if (window.innerWidth > 360) return;
+
+    if (window.innerWidth > 400) return;
 
     const cards = cardsContainer.children;
     const cardCount = cards.length;
@@ -132,13 +135,16 @@
       if (i === 0) dot.classList.add("active");
 
       // Создаем замыкание для правильного индекса
-      dot.addEventListener("click", (function(index) {
-        return function() {
-          const card = cards[index];
-          const scrollPosition = card.offsetLeft - wrapper.offsetLeft;
-          wrapper.scrollTo({ left: scrollPosition, behavior: "smooth" });
-        };
-      })(i));
+      dot.addEventListener(
+        "click",
+        (function (index) {
+          return function () {
+            const card = cards[index];
+            const scrollPosition = card.offsetLeft - wrapper.offsetLeft;
+            wrapper.scrollTo({ left: scrollPosition, behavior: "smooth" });
+          };
+        })(i),
+      );
       dotsContainer.appendChild(dot);
     }
 
@@ -174,11 +180,11 @@
   }
 
   function initSlidersIfNeeded() {
-    if (window.innerWidth <= 360) {
+    if (window.innerWidth <= 400) {
       initSliderDots(
         "recomendationSlider",
         "recomendationCards",
-        "recomendationDots"
+        "recomendationDots",
       );
       initSliderDots("stackSlider", "stackCards", "stackDots");
     }
@@ -191,21 +197,20 @@
     initSlidersIfNeeded();
   }
 
-  // При изменении размера окна
   window.addEventListener("resize", function () {
-    const recomendationDots = document.getElementById("recomendationDots");
-    const stackDots = document.getElementById("stackDots");
-
-    if (window.innerWidth <= 360) {
+    if (window.innerWidth <= 400) {
+      // ✅ было 320, стало 400
       setTimeout(function () {
         initSliderDots(
           "recomendationSlider",
           "recomendationCards",
-          "recomendationDots"
+          "recomendationDots",
         );
         initSliderDots("stackSlider", "stackCards", "stackDots");
       }, 50);
     } else {
+      const recomendationDots = document.getElementById("recomendationDots");
+      const stackDots = document.getElementById("stackDots");
       if (recomendationDots) recomendationDots.innerHTML = "";
       if (stackDots) stackDots.innerHTML = "";
     }
