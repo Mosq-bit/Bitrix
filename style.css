@@ -1,0 +1,19 @@
+@import url(style/reset.css);
+@import url(style/basic.css);
+@import url(style/variables.css);
+@import url(style/header.css);
+@import url(style/nav.css);
+@import url(style/contact.css);
+@import url(style/breadcrumbs.css);
+@import url(style/modal.css);
+@import url(style/burger.css);
+@import url(style/hero.css);
+@import url(style/recomedation.css);
+@import url(style/case.css);
+@import url(style/questions.css);
+@import url(style/form__section.css);
+@import url(style/cta.css);
+@import url(style/footer.css);
+
+@import url(style/responsive.css);
+

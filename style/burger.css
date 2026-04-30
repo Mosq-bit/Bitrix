@@ -1,0 +1,97 @@
+.mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-dark);
+            align-items: center;
+            gap: 16px;
+        }
+
+        .search-icon__mob {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-icon__mob i {
+            font-size: 20px;
+        }
+
+        /* Мобильное меню (контакты внутри) */
+        .mobile-contact-bar {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+ 
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 64px;
+    left: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: calc(100% - 64px);
+    background: white;
+    flex-direction: column;
+    padding: 32px 28px;
+    gap: 24px;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    z-index: 999;
+    border-radius: 0 16px 16px 0;
+  }
+
+  .nav-list.active {
+    left: 0;
+  }
+
+  .contact-block {
+    display: none;
+  }
+
+  .mobile-contact-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+    border-top: 1px solid var(--gray-border);
+    padding-top: 20px;
+  }
+
+  .mobile-contact-bar .phone-number {
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text-dark);
+  }
+
+  .mobile-contact-bar .btn-project {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .search-modal-content {
+    padding: 16px 20px;
+    width: 95%;
+  }
+
+  .close-search {
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-contact-bar {
+    display: none;
+  }
+}
+

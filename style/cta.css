@@ -1,0 +1,146 @@
+.cta {
+  margin-top: 100px;
+  position: relative;
+}
+
+.cta__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 279px;
+}
+
+.cta__info {
+  width: 100%;
+  max-width: 648px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cta__title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.3;
+}
+
+.cta__description {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-muted);
+}
+
+.cta__button {
+  width: fit-content;
+  max-width: 216px;
+  border-radius: 60px;
+  padding: 16px 28px;
+  background: var(--primary);
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  color: #fff;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.cta__button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.cta::before {
+  position: absolute;
+  content: "";
+  width: 344px;
+  height: 285px;
+  top: -26%;
+  right: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image: url("/img/cta-pic.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+.cta::after {
+  position: absolute;
+  content: "";
+  width: 344px;
+  height: 285px;
+  top: -26%;
+  right: 0;
+  /* background: linear-gradient(148deg, #34ae6b 0%, #2587f9 100%); */
+  mix-blend-mode: overlay;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.cta::before {
+  position: absolute;
+  content: "";
+  width: 344px;
+  height: 285px;
+  top: -26%;
+  right: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background: url("/img/cta-pic.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-blend-mode: overlay; /* или multiply, soft-light, color, luminosity */
+}
+
+.divider {
+  margin: 73px auto 40px;
+  max-width: 1320px;
+  width: 90%;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .cta__wrapper {
+    flex-direction: column;
+    align-items: start;
+    gap: 38;
+  }
+
+  .cta__info {
+    max-width: 595px;
+  }
+  .cta__title {
+    font-size: 26px;
+  }
+  .cta__description {
+    font-size: 14px;
+  }
+
+  .divider {
+    margin-top: 65px;
+  }
+}
+
+@media (max-width: 360px) {
+  .cta{
+    margin-top: 60px;
+  }
+  .cta__wrapper {
+    align-items: center;
+    gap: 40px
+  }
+}

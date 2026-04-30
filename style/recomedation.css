@@ -1,0 +1,255 @@
+/* ========== СЕКЦИЯ РЕКОМЕНДАЦИЙ ========== */
+.recomendation {
+  position: relative;
+  padding-top: 150px;
+  z-index: 3;
+}
+
+.recomendation__title {
+  font-weight: 600;
+  font-size: 40px;
+  max-width: 870px;
+  line-height: 1.3;
+}
+
+/* Контейнер для слайдера */
+.recomendation__cards-wrapper {
+  position: relative;
+  overflow-x: visible;
+  overflow-y: hidden;
+}
+
+.recomendation__cards {
+  margin-top: 60px;
+  display: flex;
+  gap: 24px;
+}
+
+.recomendation__card {
+  padding: 30px 24px 30px 20px;
+  box-shadow: 0 4px 25px 0 rgba(1, 8, 3, 0.08);
+  background: #fff;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 12px;
+  transition: transform 0.2s;
+  min-width: 280px;
+}
+
+.recomendation__card:hover {
+  transform: translateY(-4px);
+}
+
+.recomendation__card-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.recomendation__card-subtitle {
+  margin-top: 12px;
+  line-height: 1.3;
+  flex: 1;
+  color: var(--text-muted);
+}
+
+.recomendation__card-pic {
+  margin-top: 41px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border: 1px solid #eef2fa;
+  border-radius: 16px;
+}
+
+/* Точки пагинации (скрыты по умолчанию) */
+.slider-dots {
+  display: none;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.slider-dots .dot {
+  width: 8px;
+  height: 8px;
+  background-color: #cbd5e1;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.slider-dots .dot.active {
+  background-color: var(--primary);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ========== АДАПТИВ 1024px ========== */
+@media (max-width: 1024px) {
+  .recomendation__title {
+    font-size: 36px;
+  }
+}
+
+/* ========== АДАПТИВ 768px ========== */
+@media (max-width: 768px) {
+  .recomendation {
+    padding-top: 80px;
+  }
+  .recomendation__title {
+    font-size: 32px;
+  }
+  .recomendation__cards {
+    margin-top: 40px;
+    gap: 16px;
+  }
+  .recomendation__card {
+    padding: 16px;
+  }
+}
+
+/* ========== АДАПТИВ 640px ========== */
+@media (max-width: 640px) {
+  .recomendation {
+    padding-top: 60px;
+  }
+  .recomendation__title {
+    font-size: 28px;
+  }
+  .recomendation__cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .recomendation__card {
+    flex-direction: row;
+    gap: 67px;
+    border-radius: 20px;
+    width: 100%;
+  }
+  .recomendation__card-title {
+    font-size: 18px;
+  }
+  .recomendation__card-subtitle {
+    font-size: 14px;
+    margin-top: 0;
+  }
+  .recomendation__card-pic {
+    max-width: 198px;
+    height: 107px;
+    margin-top: 0;
+  }
+}
+
+/* ========== АДАПТИВ 480px ========== */
+@media (max-width: 480px) {
+  .recomendation__title {
+    font-size: 24px;
+  }
+  .recomendation__card-pic {
+    height: 140px;
+  }
+}
+
+/* ========== АДАПТИВ 360px (ВКЛЮЧАЕМ СЛАЙДЕР) ========== */
+@media (max-width: 360px) {
+  .recomendation {
+    padding-top: 40px;
+  }
+
+  .recomendation__title {
+    font-size: 20px;
+  }
+
+  /* Включаем горизонтальный скролл (слайдер) */
+  .recomendation__cards-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 24px;
+  }
+
+  /* Скрываем скроллбар для Webkit браузеров */
+  .recomendation__cards-wrapper::-webkit-scrollbar {
+    height: 4px;
+  }
+  .recomendation__cards-wrapper::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 4px;
+  }
+  .recomendation__cards-wrapper::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+  }
+
+  .recomendation__cards {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 16px;
+    margin-top: 0;
+    scroll-snap-type: x mandatory;
+  }
+
+  .recomendation__card {
+    flex-direction: column !important;
+    min-width: 280px;
+    max-width: 280px;
+    width: 280px;
+    padding: 16px 12px;
+    gap: 8px;
+    scroll-snap-align: start;
+  }
+
+  .recomendation__card-content {
+    max-width: 100%;
+  }
+
+  .recomendation__card-title {
+    font-size: 16px;
+  }
+
+  .recomendation__card-subtitle {
+    font-size: 13px;
+    margin-top: 4px;
+  }
+
+  .recomendation__card-pic {
+    max-width: 100%;
+    height: 152px;
+    margin-top: 16px;
+    border-radius: 8px;
+  }
+
+  /* Показываем точки пагинации */
+  .slider-dots {
+    display: flex !important;
+  }
+
+  /* Скрываем blob элементы */
+  .blob {
+    display: none;
+  }
+}
+
+/* ========== АДАПТИВ 320px ========== */
+@media (max-width: 320px) {
+  .recomendation__title {
+    font-size: 18px;
+  }
+  
+  .recomendation__card {
+    min-width: 260px;
+    max-width: 260px;
+    width: 260px;
+  }
+  
+  .recomendation__card-pic {
+    height: 130px;
+  }
+}

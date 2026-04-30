@@ -1,0 +1,554 @@
+.footer {
+  position: relative;
+  padding-bottom: 26px;
+}
+
+.footer__inner {
+  margin-top: 100px;
+
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  a {
+    font-size: 14px;
+    color: var(--text-dark);
+  }
+}
+
+.footer__logo {
+  position: absolute;
+  content: "";
+  top: -45px;
+  left: 0;
+}
+.footer__info {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 196px;
+  display: flex;
+  flex-direction: column;
+}
+.footer__phone {
+}
+.footer__email {
+  margin-top: 8px;
+}
+.footer__address {
+  margin-top: 8px;
+}
+.footer__social {
+  margin-top: 19px;
+  display: flex;
+  gap: 10px;
+}
+.footer__social-link {
+  line-height: 130%;
+  font-size: 14px;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer__list-company {
+  width: 100%;
+  max-width: 89px;
+}
+.footer__item {
+}
+.footer__link {
+}
+
+.footer__list-crm {
+  width: 100%;
+  max-width: 218px;
+}
+.footer__block {
+  width: 100%;
+  max-width: 142px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 135px;
+}
+.footer__license {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer__license-link {
+}
+.footer__partners {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.footer__partners-link {
+  font-weight: 600;
+}
+.footer__extra {
+  width: 100%;
+  max-width: 147px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.footer__extra-link {
+}
+.divider__footer {
+  margin: 40px 0 20px;
+}
+.footer__bottom {
+  display: flex;
+  gap: 157px;
+  align-items: end;
+  justify-content: flex-start;
+
+  font-weight: 600;
+  color: var(--gray-light);
+
+  a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-light);
+  }
+}
+.footer__copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+@media (max-width: 768px) {
+  .footer__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "info    extra    extra"
+      "company crm     block";
+    gap: 40px;
+  }
+
+  .footer__info {
+    grid-area: info;
+  }
+  .footer__extra {
+    grid-area: extra;
+    margin-top: 20px;
+    margin-left: 111px;
+  }
+  .footer__list-company {
+    grid-area: company;
+    margin-right: 100px;
+  }
+  .footer__list-crm {
+    grid-area: crm;
+    margin-right: 46px;
+  }
+  .footer__block {
+    grid-area: block;
+  }
+  .footer__bottom {
+    width: 100%;
+    max-width: 663px;
+
+    gap: 50px;
+    font-size: 14px;
+    line-height: 1.1;
+    white-space: nowrap;
+
+    a {
+      white-space: nowrap;
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  padding-bottom: 26px;
+}
+
+.footer__inner {
+  margin-top: 100px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer__inner a {
+  font-size: 14px;
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer__inner a:hover {
+  color: var(--primary);
+}
+
+.footer__logo {
+  position: absolute;
+  content: "";
+  top: -45px;
+  left: 0;
+}
+
+.footer__logo img {
+  max-width: 100px;
+  height: auto;
+}
+
+.footer__info {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 196px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__email {
+  margin-top: 8px;
+}
+
+.footer__address {
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.footer__social {
+  margin-top: 19px;
+  display: flex;
+  gap: 10px;
+}
+
+.footer__social-link img {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.2s;
+}
+
+.footer__social-link:hover img {
+  opacity: 0.7;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__list-company {
+  width: 100%;
+  max-width: 89px;
+}
+
+.footer__list-crm {
+  width: 100%;
+  max-width: 218px;
+}
+
+.footer__link {
+  font-size: 14px;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.footer__link:hover {
+  color: var(--primary);
+}
+
+.footer__block {
+  width: 100%;
+  max-width: 142px;
+  display: flex;
+  flex-direction: column;
+  gap: 135px;
+}
+
+.footer__license {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__license-link {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer__partners {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.footer__partners-link {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.footer__extra {
+  width: 100%;
+  max-width: 147px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.footer__extra-link {
+  font-size: 14px;
+}
+
+.divider__footer {
+  margin: 40px 0 20px;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.footer__bottom {
+  display: flex;
+  gap: 157px;
+  align-items: end;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer__copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer__copyright span {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.footer__bottom a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer__bottom a:hover {
+  color: var(--primary);
+}
+
+/* ========== АДАПТИВ 768px ========== */
+@media (max-width: 768px) {
+  .footer__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "info    extra    extra"
+      "company crm     block";
+    gap: 40px;
+    margin-top: 80px;
+  }
+
+  .footer__info {
+    grid-area: info;
+    max-width: 100%;
+  }
+
+  .footer__extra {
+    grid-area: extra;
+    margin-top: 20px;
+    margin-left: 0;
+    max-width: 100%;
+    text-align: right;
+  }
+
+  .footer__list-company {
+    grid-area: company;
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .footer__list-crm {
+    grid-area: crm;
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .footer__block {
+    grid-area: block;
+    max-width: 100%;
+  }
+
+  .footer__bottom {
+    width: 100%;
+    max-width: 100%;
+    gap: 50px;
+    font-size: 14px;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  .footer__bottom a {
+    white-space: nowrap;
+  }
+}
+
+/* ========== АДАПТИВ 480px ========== */
+@media (max-width: 480px) {
+  .footer__inner {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "info extra"
+      "company crm"
+      "block block";
+    gap: 30px;
+  }
+
+  .footer__extra {
+    text-align: right;
+  }
+
+  .footer__block {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 100%;
+  }
+
+  .footer__bottom {
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__copyright {
+    align-items: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer {
+    padding-bottom: 20px;
+
+    font-size: 14px;
+    /* width: 100%;
+    max-width: 328px; */
+  }
+
+  .footer__inner {
+
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 колонки */
+    grid-template-areas:
+      "contact contact" /* контакты на всю ширину */
+      "extra extra" /* ОКВЭД на всю ширину */
+      "crm company" /* CRM слева, Компания справа */
+      "license partners"; /* Лицензии слева, Партнеры справа */
+    gap: 20px;
+  }
+
+  .footer__logo {
+    width: 40px;
+    height: 40px;
+    
+    top: 4%;
+    left: 0%;
+  }
+  /* Назначаем grid-area каждому элементу */
+  .footer__info {
+    margin-left: 76px;
+    grid-area: contact;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 20px;
+  }
+  .footer__info-contact {
+    max-width: 190px;
+    /* margin-left: 76px; */
+  }
+  .footer__social {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .footer__social-link img {
+    width: 35px;
+    height: 24px;
+  }
+
+  .footer__extra {
+    grid-area: extra;
+    margin-top: 4px;
+    text-align: justify;
+    margin-bottom: 20px;
+
+  }
+
+  .footer__list-crm {
+    grid-area: crm;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .footer__list-company {
+    grid-area: company;
+  }
+
+  .footer__license {
+    grid-area: license;
+  }
+
+  .footer__partners {
+    grid-area: partners;
+  }
+
+  .footer__block {
+    display: contents;
+  }
+
+  /* Разделитель */
+  .divider__footer {
+    margin: 24px 0 16px;
+  }
+
+  /* Нижняя часть */
+  .footer__bottom {
+    flex-direction: column;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .footer__copyright {
+    align-items: baseline;
+    gap: 3px;
+  }
+
+  .footer__copyright span {
+    font-size: 9px;
+  }
+
+  .footer__bottom a {
+    font-size: 9px;
+    white-space: nowrap;
+  }
+
+  /* Контейнер для ссылок внизу */
+  .footer__legal-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+}

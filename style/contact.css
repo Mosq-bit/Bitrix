@@ -1,0 +1,48 @@
+.contact-block {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .phone-number {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 14px;
+            white-space: nowrap;
+            transition: color 0.2s;
+        }
+
+        .phone-number:hover {
+            color: var(--primary);
+        }
+
+        .search-icon {
+            cursor: pointer;
+            color: var(--text-dark);
+            font-size: 18px;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-icon:hover {
+            color: var(--primary);
+        }
+
+        .btn-project {
+            border-radius: 60px;
+            padding: 12px 24px;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            white-space: nowrap;
+        }
+
+        .btn-project:hover {
+            background-color: var(--primary-dark);
+        }
