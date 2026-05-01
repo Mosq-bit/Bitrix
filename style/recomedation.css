@@ -1,4 +1,4 @@
-
+/* ========== СЕКЦИЯ РЕКОМЕНДАЦИЙ ========== */
 .recomendation {
   position: relative;
   padding-top: 150px;
@@ -12,11 +12,21 @@
   line-height: 1.3;
 }
 
-
+/* Контейнер для слайдера */
 .recomendation__cards-wrapper {
   position: relative;
-  overflow-x: visible;
-  overflow-y: hidden;
+
+  
+
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.recomendation__cards-wrapper::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .recomendation__cards {
@@ -66,7 +76,7 @@
   border-radius: 16px;
 }
 
-
+/* Точки пагинации (скрыты по умолчанию) */
 .slider-dots {
   display: none;
   justify-content: center;
@@ -89,14 +99,14 @@
   border-radius: 4px;
 }
 
-
+/* ========== АДАПТИВ 1024px ========== */
 @media (max-width: 1024px) {
   .recomendation__title {
     font-size: 36px;
   }
 }
 
-
+/* ========== АДАПТИВ 768px ========== */
 @media (max-width: 768px) {
   .recomendation {
     padding-top: 80px;
@@ -114,44 +124,13 @@
 }
 
 
-@media (max-width: 640px) {
+@media (max-width: 600px) {
   .recomendation {
     padding-top: 60px;
   }
+
   .recomendation__title {
     font-size: 28px;
-  }
-  .recomendation__cards {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .recomendation__card {
-    flex-direction: row;
-    gap: 67px;
-    border-radius: 20px;
-    width: 100%;
-  }
-  .recomendation__card-title {
-    font-size: 18px;
-  }
-  .recomendation__card-subtitle {
-    font-size: 14px;
-    margin-top: 0;
-  }
-  .recomendation__card-pic {
-    max-width: 198px;
-    height: 107px;
-    margin-top: 0;
-  }
-}
-
-@media (max-width: 400px) {
-  .recomendation {
-    padding-top: 40px;
-  }
-
-  .recomendation__title {
-    font-size: 22px;
   }
 
 
@@ -161,9 +140,13 @@
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     margin-top: 24px;
+    
+   
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 
-
+  
   .recomendation__cards-wrapper::-webkit-scrollbar {
     height: 4px;
   }
@@ -200,17 +183,17 @@
   }
 
   .recomendation__card-title {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .recomendation__card-subtitle {
-    font-size: 13px;
+    font-size: 14px;
     margin-top: 4px;
   }
 
   .recomendation__card-pic {
     max-width: 100%;
-    height: 152px;
+    height: 150px;
     margin-top: 12px;
     border-radius: 8px;
   }
@@ -224,20 +207,49 @@
 }
 
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   .recomendation__title {
-    font-size: 20px;
+    font-size: 24px;
   }
   
   .recomendation__card {
     min-width: 260px;
     max-width: 260px;
     width: 260px;
-    padding: 14px 10px;
   }
   
   .recomendation__card-pic {
     height: 140px;
+  }
+  
+  .recomendation__card-title {
+    font-size: 16px;
+  }
+  
+  .recomendation__card-subtitle {
+    font-size: 13px;
+  }
+}
+
+
+@media (max-width: 360px) {
+  .recomendation {
+    padding-top: 40px;
+  }
+  
+  .recomendation__title {
+    font-size: 20px;
+  }
+  
+  .recomendation__card {
+    min-width: 240px;
+    max-width: 240px;
+    width: 240px;
+    padding: 14px 10px;
+  }
+  
+  .recomendation__card-pic {
+    height: 130px;
   }
   
   .recomendation__card-title {
@@ -246,22 +258,5 @@
   
   .recomendation__card-subtitle {
     font-size: 12px;
-  }
-}
-
-
-@media (max-width: 320px) {
-  .recomendation__title {
-    font-size: 18px;
-  }
-  
-  .recomendation__card {
-    min-width: 240px;
-    max-width: 240px;
-    width: 240px;
-  }
-  
-  .recomendation__card-pic {
-    height: 130px;
   }
 }
