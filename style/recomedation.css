@@ -1,4 +1,4 @@
-/* ========== СЕКЦИЯ РЕКОМЕНДАЦИЙ ========== */
+
 .recomendation {
   position: relative;
   padding-top: 150px;
@@ -12,12 +12,8 @@
   line-height: 1.3;
 }
 
-/* Контейнер для слайдера */
 .recomendation__cards-wrapper {
   position: relative;
-
-  
-
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -76,7 +72,7 @@
   border-radius: 16px;
 }
 
-/* Точки пагинации (скрыты по умолчанию) */
+
 .slider-dots {
   display: none;
   justify-content: center;
