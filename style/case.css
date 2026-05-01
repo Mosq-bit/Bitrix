@@ -1,17 +1,4 @@
-/* ========== ОБЩИЕ СТИЛИ ДЛЯ УБИРАНИЯ ГОРИЗОНТАЛЬНОГО СКРОЛЛА ========== */
-html, body {
-    overflow-x: hidden;
-    max-width: 100%;
-}
 
-.container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 24px;
-    overflow-x: hidden;
-}
-
-/* ========== СЕКЦИЯ КЕЙСОВ ========== */
 .case {
     padding-bottom: 80px;
     position: relative;
