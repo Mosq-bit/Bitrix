@@ -47,7 +47,7 @@
     background: var(--primary-dark);
 }
 
-/* ========== SWIPER СЛАЙДЕР ========== */
+
 .case__slider {
     margin-top: 60px;
     position: relative;
@@ -116,12 +116,12 @@
 
 /* Стили для разных слайдов */
 .case__slide-1 {
-    background-image: url('/img/case1.png');
+    background-image: url('/Bitrix/img/case1.png');
     background-size: cover;
 }
 
 .case__slide-2 {
-    background-image: url('/img/case2.png');
+    background-image: url('/Bitrix/img/case2.png');
     background-size: cover;
     color: #fff;
 }
@@ -138,7 +138,7 @@
 }
 
 .case__slide-3 {
-    background-image: url('/img/case3.png');
+    background-image: url('/Bitrix/img/case3.png');
     background-size: cover;
 }
 
@@ -183,7 +183,7 @@
     border-radius: 5px;
 }
 
-/* ========== АДАПТИВ ========== */
+
 @media (max-width: 1024px) {
     .case__title { 
         font-size: 36px; 
@@ -271,7 +271,7 @@
         font-size: 18px; 
     }
     
-    /* Убираем стрелки навигации на маленьких экранах */
+  
     .swiper-button-next,
     .swiper-button-prev {
         display: none;
